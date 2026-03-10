@@ -1,0 +1,83 @@
+# Training parameters configuration
+
+# Data paths
+data:
+  out_dir: "/workdir2/cn24/program/CT_Classification/logs"
+  exp_name: "auto"
+  split_json: "metadata/pvt.json"
+
+  datasets_key: "training"
+  validation_key: "validation"
+
+# Model parameters
+model:
+  architecture: "ResNet18"
+  spatial_dims: 3
+  in_channels: 1
+  num_classes: 2
+  dropout: 0.0
+
+loss:
+  loss_type: "CrossEntropyLoss"
+#  loss_type: "BCELoss"
+
+# Device parameters
+device:
+  cuda_device: "cuda:1"  # 可以设置为 "cuda:0", "cuda:1" 等来选择特定GPU，或 "cpu" 使用CPU
+
+# Training hyperparameters
+training:
+  max_epochs: 200
+  patience: 40
+  batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+  cache_num: 170
+  cache_rate: 1.0
+  num_workers: 2
+  pin_memory: False
+
+# Validation parameters
+validation:
+  batch_size: 4
+  cache_num: 40
+  cache_rate: 1.0
+  num_workers: 0
+  pin_memory: False
+
+# Transform parameters
+transforms:
+  spacing:
+#    pixdim: [1.62, 1.62, 3.2]
+    pixdim: [1.0, 1.0, 2.0]
+#    pixdim: [0.8, 0.8, 1.5]
+    mode: "bilinear"
+  scale_intensity:
+    a_min: -79
+    a_max: 304
+#    a_min: -125
+#    a_max: 250
+    b_min: 0.0
+    b_max: 1.0
+    clip: True
+  crop_foreground:
+    margin: 30
+  resize:
+    spatial_size: [192, 128, 96]
+#    spatial_size: [512, 512, 96]
+    mode: "constant"
+  rand_crop:
+    spatial_size: [64, 64, 64]
+#    spatial_size: [96, 96, 96]
+    pos: 1
+    neg: 0
+    num_samples: 4
+  rand_shift_intensity:
+    offsets: 0.40
+    prob: 0.50
+
+# Scheduler parameters
+scheduler:
+  factor: 0.35
+  min_lr: 1e-6
+  patience: 10

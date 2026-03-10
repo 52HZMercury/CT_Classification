@@ -1,0 +1,1610 @@
+{
+    "training": [
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038927656.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033474237.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018084103.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017295128.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038049541.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033587128.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021382625.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036964548.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037414530.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0001102996.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000788494.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034157527.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019094320.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018660422.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000704317.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000221276.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000113392.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020711664.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037713431.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033596680.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035798301.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038970246.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037871144.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035542559.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0039130424.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038922102.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032203173.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000253713.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000636246.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036164961.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034229029.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016526976.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0002845785.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032414670.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038118518.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0014001596.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032736112.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008015948.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000211711.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015349949.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036978526.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016930710.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0006123279.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0001679969.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034949684.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019590363.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0003479056.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021602208.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0011224810.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000213724.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032710117.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0011292873.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016752583.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036607115.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034505773.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020446428.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033265332.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034037006.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016516781.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038623578.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035848142.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0012053130.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033712492.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033977299.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034404499.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008908868.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0004525063.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035188531.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017727936.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038796149.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032591382.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016497523.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035652573.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0039061896.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0001289675.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037091513.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015931958.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0010192433.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020700941.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016674612.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020519315.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015113421.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035102830.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019158934.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008584126.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034514245.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033714973.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020868737.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033979948.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000579117.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037902155.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036685380.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037102775.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035632522.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032280248.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037212121.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0007491831.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037879115.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000088522.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033108207.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035757733.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036668670.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0013706180.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034685682.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037922047.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0001005937.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032578021.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0014719635.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0006485121.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034421361.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015408558.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035752490.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032556667.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008613479.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020536954.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000177929.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016131560.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034263208.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0014519429.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021155004.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0003340706.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033784839.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032819364.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021406883.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0001181604.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000426585.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038659407.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037029606.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016921959.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019615689.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000073449.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036835215.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019430015.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021208687.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033342884.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017721445.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018061517.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032927787.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0013140008.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032278205.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018427067.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035296375.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021491293.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036092694.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035597842.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034384987.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034437886.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033927126.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0039078710.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034287341.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0005190147.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038893904.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033470720.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0002774287.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033741519.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017407767.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018587611.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017692058.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033242216.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021586162.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000984697.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036562144.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037654050.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021248402.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038546105.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037461713.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017823671.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037066909.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033555943.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032421929.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008284908.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016204404.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032925333.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032581854.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038556179.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0010403972.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015897128.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0007238300.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033766797.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034612410.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035469123.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038980772.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038732467.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038821568.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019363838.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035838143.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018160275.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0006874542.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019293801.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037212060.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020939413.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033559479.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016298509.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0004406873.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034852164.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038598281.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021629113.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034269516.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033535585.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021024326.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0039120398.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0011062371.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016310149.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037147032.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017641553.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020464042.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0014534493.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034980322.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037192383.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034216735.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038021376.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038316977.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0007717132.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033302939.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019174991.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000650951.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034220220.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000290016.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033984061.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033377678.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018261822.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035410485.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020516014.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035867502.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0004896630.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020920910.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036499156.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038091346.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038026345.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032334836.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038985705.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035559455.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038601489.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0004346575.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021269273.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019634694.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033009780.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019900360.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0007903091.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015857391.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034210227.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032461792.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008606669.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016183402.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034516448.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018055889.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032292807.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033227824.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034369333.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034616148.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008336266.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034158030.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0009746134.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021057524.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0005763623.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037104444.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036223912.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0039187512.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038461446.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032538375.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015624013.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038740109.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000227690.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037396494.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017862917.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038402583.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0002649681.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000616496.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017427475.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038952733.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016733622.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037448496.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032910983.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035177539.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020050354.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033835563.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036087340.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032240380.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0015471300.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000524623.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0007008621.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038366781.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038422975.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018625030.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021491299.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032494089.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032134320.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035126274.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038112322.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038495844.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017628268.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033830317.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032414710.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038907981.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032017317.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035474743.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033009807.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016932969.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032498482.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0020365275.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017632915.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0003392497.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035650404.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036273615.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035644977.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018886127.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037208935.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017501946.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021615134.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0021130454.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034207725.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016455518.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017518559.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038801188.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034496989.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037877323.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037102588.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033182068.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0009829509.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037160277.nii.gz",
+            "label": 0
+        }
+    ],
+    "validation": [
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008636660.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018641909.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038727337.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0003156467.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033491762.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018883137.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034532066.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037231597.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034068223.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018331033.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038782659.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000109486.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032904612.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037819759.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036086312.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038573512.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033539048.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032989570.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033927027.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019851236.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037507976.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038918791.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032001276.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019752148.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016106732.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000051864.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0036754753.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0002201933.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016557802.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037073357.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035428360.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034494680.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0010229751.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037608594.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0008269638.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032935393.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0010180912.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032485638.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035530481.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0013249380.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0012841396.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0005812283.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0007801873.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038797481.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032278548.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016501657.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035731482.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034770604.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038852246.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034996270.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000451532.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032426806.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017430054.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037917198.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0019335155.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038632526.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033784821.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000280071.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0001988313.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0035621503.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0011284396.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033430823.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032897276.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037509775.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0018390654.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038757797.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033065678.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033300219.nii.gz",
+            "label": 1
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033861941.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0037698966.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0032727882.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017030702.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0013793662.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0038506098.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0016858642.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0000085863.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0033959630.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0017741755.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0034923961.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0010358953.nii.gz",
+            "label": 0
+        },
+        {
+            "image": "/workdir2/cn24/data/PVT_huaxi_pro/image/0039216462.nii.gz",
+            "label": 1
+        }
+    ]
+}
