@@ -1,2 +1,0 @@
-monai-weekly[nibabel, tqdm, einops]
-matplotlib
