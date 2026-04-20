@@ -4,21 +4,27 @@
 data:
   out_dir: "/workdir2/cn24/program/CT_Classification/logs"
   exp_name: "auto"
-  split_json: "metadata/pvt.json"
+  split_json: "metadata/new_pvl_bad_valve_performance.json"
+#  split_json: "metadata/huaxi_pvl_30daysSuccess.json"
 
   datasets_key: "training"
   validation_key: "validation"
 
 # Model parameters
 model:
-  architecture: "ResNet18"
+#  architecture: "resnet18"
+  architecture: "multimodelresnet"
   spatial_dims: 3
-  in_channels: 1
+  tabular_dim: 29
+#  tabular_dim: 37
+#  tabular_dim: 74
+  in_channels: 3
   num_classes: 2
   dropout: 0.0
 
 loss:
   loss_type: "CrossEntropyLoss"
+#  loss_type: "FocalLoss"
 #  loss_type: "BCELoss"
 
 # Device parameters
@@ -34,7 +40,7 @@ training:
   weight_decay: 0.00001
   cache_num: 170
   cache_rate: 1.0
-  num_workers: 2
+  num_workers: 0
   pin_memory: False
 
 # Validation parameters
@@ -48,8 +54,8 @@ validation:
 # Transform parameters
 transforms:
   spacing:
-#    pixdim: [1.62, 1.62, 3.2]
-    pixdim: [1.0, 1.0, 2.0]
+    pixdim: [1.62, 1.62, 3.2]
+#    pixdim: [1.0, 1.0, 2.0]
 #    pixdim: [0.8, 0.8, 1.5]
     mode: "bilinear"
   scale_intensity:
@@ -67,8 +73,8 @@ transforms:
 #    spatial_size: [512, 512, 96]
     mode: "constant"
   rand_crop:
-    spatial_size: [64, 64, 64]
-#    spatial_size: [96, 96, 96]
+#    spatial_size: [64, 64, 64]
+    spatial_size: [96, 96, 96]
     pos: 1
     neg: 0
     num_samples: 4

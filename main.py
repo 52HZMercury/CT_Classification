@@ -42,10 +42,14 @@ def main():
     # 修改：初始化分类相关的指标
     acc_val_best = 0.0
     auc_val_best = 0.0
+    ppv_val_best = 0.0
+    npv_val_best = 0.0
+    rec_val_best = 0.0
+    spec_val_best = 0.0
     global_step_best = 0
 
     print(f"开始分类模型训练 ---------------------------------------------------")
-    print(f"模型：ResNet18-3D | 类别数：{config['model']['num_classes']}")
+    print(f"模型：{config['model']['architecture']} | 类别数：{config['model']['num_classes']}")
     print(f"输出目录：{os.path.abspath(root_dir)}")
 
     # 训练循环
@@ -56,6 +60,10 @@ def main():
         (current_epoch,
          acc_val_best,
          auc_val_best,
+         ppv_val_best,
+         npv_val_best,
+         rec_val_best,
+         spec_val_best,
          global_step_best,
          early_stop_counter,
          stop_now) = train(
@@ -63,6 +71,10 @@ def main():
             current_epoch,
             acc_val_best,
             auc_val_best,
+            ppv_val_best,
+            npv_val_best,
+            rec_val_best,
+            spec_val_best,
             global_step_best,
             early_stop_counter,
             config
@@ -75,8 +87,12 @@ def main():
     print("")
     print(f"======================= 训练完成 ========================")
     print(f"== 实验名称  : {config['data']['exp_name']}")
-    print(f"== 最佳准确率 (Acc): {acc_val_best:.4f}")
-    print(f"== 对应 AUC    : {auc_val_best:.4f}")
+    print(f"== ACC: {acc_val_best:.4f}")
+    print(f"== AUC: {auc_val_best:.4f}")
+    print(f"== PPV: {ppv_val_best:.4f}")
+    print(f"== NPV: {npv_val_best:.4f}")
+    print(f"== Recall: {rec_val_best:.4f}")
+    print(f"== Specificity: {spec_val_best:.4f}")
     print(f"== 最佳轮次 (Epoch): {global_step_best}")
     print(f"=======================================================")
 

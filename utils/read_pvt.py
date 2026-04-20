@@ -4,9 +4,9 @@ import os
 from sklearn.model_selection import train_test_split
 
 
-def generate_dataset_json(input_file, output_dir='../metadata', output_filename='pvt.json'):
+def generate_dataset_json(input_file, output_dir='../metadata', output_filename='img_30daysSuccess.json'):
     """
-    读取数据并生成 JSON，保存到指定的 metadata 路径下。
+    读取数据并生成 JSON，包含 image, CA, CAC 三路图像路径。
     """
     # 1. 检查并创建 metadata 目录
     if not os.path.exists(output_dir):
@@ -14,47 +14,73 @@ def generate_dataset_json(input_file, output_dir='../metadata', output_filename=
         print(f"已创建目录: {output_dir}")
 
     # 2. 加载文件
-    # 【核心修改点】：加入 dtype={'ID': str}，强制将 ID 列作为字符串读取，从而保留前置 0
     if input_file.endswith('.csv'):
-        df = pd.read_csv(input_file, dtype={'DicomID': str})
+        df = pd.read_csv(input_file, dtype={'ID': str})
     else:
-        df = pd.read_excel(input_file, dtype={'DicomID': str})
+        df = pd.read_excel(input_file, sheet_name="data_external_final", dtype={'ID': str})
 
-    # 3. 准备数据列表
+    # 3. 路径配置
+    base_data_dir = "/workdir2/cn24/data/30daysSuccess"
+    # 定义子文件夹
+    img_dir = os.path.join(base_data_dir, "image")
+    ca_dir = os.path.join(base_data_dir, "CA")
+    cac_dir = os.path.join(base_data_dir, "CAC")
+
+    # 4. 准备数据列表
     data_list = []
-    img_prefix = "/workdir2/cn24/data/PVT_huaxi_pro/image/"
 
     # 清洗数据：移除 ID 或 Label 为空的行
-    df = df.dropna(subset=['DicomID', 'PVL_NotImproved_afterPostdilatation'])
+    df = df.dropna(subset=['ID', 'Device_success_at_30_days'])
 
     for _, row in df.iterrows():
         # 处理 ID (转换为字符串并去除前后空格)
-        # 因为读取时已经强制为字符串，这里前置0会被完美保留
-        # split('.')[0] 是为了兼容如果 Excel 里真的有人手动输入了 "0012.0" 这种奇葩文本
-        patient_id = str(row['DicomID']).split('.')[0].strip()
+        patient_id = str(row['ID']).split('.')[0].strip()
 
         # 映射标签：Yes -> 1, No -> 0
-        raw_label = str(row['PVL_NotImproved_afterPostdilatation']).strip().lower()
+        raw_label = str(row['Device_success_at_30_days']).strip().lower()
         label_val = 1 if raw_label == 'yes' else 0
 
-        # 按照要求格式构建字典
+        # 按照要求格式构建字典，增加 CA 和 CAC 路径
         entry = {
-            "image": f"{img_prefix}{patient_id}.nii.gz",
+            "image": os.path.join(img_dir, f"{patient_id}.nii.gz"),
+            "CA": os.path.join(ca_dir, f"{patient_id}.nii.gz"),
+            "CAC": os.path.join(cac_dir, f"{patient_id}.nii.gz"),
             "label": label_val
         }
         data_list.append(entry)
 
-    # 4. 划分数据集 (80% 训练, 20% 验证)
-    # random_state=42 用于确保每次运行结果一致，生产环境可根据需要修改
-    train_data, val_data = train_test_split(data_list, test_size=0.2, random_state=42)
+    # # 5. 划分数据集 (80% 训练, 20% 验证)
+    # train_data, val_data = train_test_split(data_list, test_size=0.2, random_state=42)
 
-    # 5. 构建最终 JSON 结构
+    # 6. 划分数据集 (确保阳性样本的 80% 进入训练集，且整体比例 8:2)
+    # 将正负样本分开
+    pos_samples = [d for d in data_list if d['label'] == 1]
+    neg_samples = [d for d in data_list if d['label'] == 0]
+
+    # # 只要175例
+    # neg_samples = neg_samples[:175]
+
+    # 分别对正负样本进行 8:2 划分
+    train_pos, val_pos = train_test_split(pos_samples, test_size=0.2, random_state=42)
+    train_neg, val_neg = train_test_split(neg_samples, test_size=0.2, random_state=42)
+
+    # 合并训练集和验证集
+    train_data = train_pos + train_neg
+    val_data = val_pos + val_neg
+
+    # 打乱顺序，防止训练时模型先只看 1 再只看 0
+    import random
+    random.seed(42)
+    random.shuffle(train_data)
+    random.shuffle(val_data)
+
+    # 6. 构建最终 JSON 结构
     final_output = {
         "training": train_data,
         "validation": val_data
     }
 
-    # 6. 写入到 metadata/dataset.json
+    # 7. 写入文件
     output_path = os.path.join(output_dir, output_filename)
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(final_output, f, indent=4, ensure_ascii=False)
@@ -62,20 +88,16 @@ def generate_dataset_json(input_file, output_dir='../metadata', output_filename=
     print("-" * 30)
     print(f"✅ 成功！JSON 文件已保存至: {output_path}")
     print(f"📊 总样本数: {len(data_list)}")
-    print(f"📊 训练集数量: {len(train_data)}")
-    print(f"📊 验证集数量: {len(val_data)}")
+    print(f"   - 阳性(1): {len(pos_samples)} | 阴性(0): {len(neg_samples)}")
+    print(f"📊 训练集: {len(train_data)} (包含 {len(train_pos)} 个阳性)")
+    print(f"📊 验证集: {len(val_data)} (包含 {len(val_pos)} 个阳性)")
     print("-" * 30)
 
 
-# ==========================================
-# 主函数入口
-# ==========================================
 if __name__ == "__main__":
-    # 请根据实际文件名修改此处
-    input_csv = '/workdir2/cn24/data/PVT_huaxi_pro/data_PVL_V0309.xlsx'
+    input_xlsx = '/workdir2/cn24/data/30daysSuccess/data_30success.xlsx'
 
-    # 检查文件是否存在
-    if os.path.exists(input_csv):
-        generate_dataset_json(input_csv)
+    if os.path.exists(input_xlsx):
+        generate_dataset_json(input_xlsx)
     else:
-        print(f"❌ 找不到输入文件: {input_csv}，请检查路径。")
+        print(f"❌ 找不到输入文件: {input_xlsx}")

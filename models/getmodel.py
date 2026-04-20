@@ -6,6 +6,7 @@ import sys
 import yaml
 import torch
 from models.resnet import resnet18_3d
+from models.multimodel_resnet import MultiModelResNet
 
 # --- Numpy 兼容性处理 ---
 import numpy as np
@@ -31,6 +32,9 @@ def create_model():
 
     if architecture.lower() == 'resnet18':
         model = resnet18_3d(config['model']['in_channels'], config['model']['num_classes'])
+    elif architecture.lower() == 'multimodelresnet':
+        model = MultiModelResNet(tabular_dim=config['model']['tabular_dim'], in_channels=config['model']['in_channels'], num_classes=config['model']['num_classes'])
+
     else:
         raise ValueError(f"Unsupported architecture: {architecture}")
 
