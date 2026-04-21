@@ -3,3 +3,4 @@ output2.log
 output3.log
 /logs
 /_pycache_
+/.vscode
