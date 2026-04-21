@@ -55,7 +55,7 @@ def generate_multimodal_json_raw(input_file, output_dir='../metadata', output_fi
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    # 2. 读取两个 Sheet 的数据
+    # 2. 读取两个 Sheet 的
     df_huaxi = pd.read_excel(input_file, sheet_name="data_huaxi_final", dtype={'ID': str})
     df_external = pd.read_excel(input_file, sheet_name="data_external_final", dtype={'ID': str})
 
