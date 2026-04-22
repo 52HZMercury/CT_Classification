@@ -20,9 +20,9 @@ def train(Trainer, current_epoch, acc_best, auc_best, ppv_best, npv_best, rec_be
     for step, batch in enumerate(epoch_iterator):
         # 1. 准备图像数据 [B, 3, H, W, D]
         img = batch["image"].to(Trainer.device)
-        ca = batch["CA"].to(Trainer.device)
+        # ca = batch["CA"].to(Trainer.device)
         cac = batch["CAC"].to(Trainer.device)
-        x_image = torch.cat([img, ca, cac], dim=1)
+        x_image = torch.cat([img, cac], dim=1)
 
         # pred = batch["pred"].to(Trainer.device)
         # x_image = torch.cat([img, pred], dim=1)

@@ -15,10 +15,10 @@ model:
 #  architecture: "resnet18"
   architecture: "multimodelresnet"
   spatial_dims: 3
-  tabular_dim: 29
+  tabular_dim: 24
 #  tabular_dim: 37
 #  tabular_dim: 74
-  in_channels: 3
+  in_channels: 2
   num_classes: 2
   dropout: 0.0
 
@@ -29,12 +29,12 @@ loss:
 
 # Device parameters
 device:
-  cuda_device: "cuda:1"  # 可以设置为 "cuda:0", "cuda:1" 等来选择特定GPU，或 "cpu" 使用CPU
+  cuda_device: "cuda:0"  # 可以设置为 "cuda:0", "cuda:1" 等来选择特定GPU，或 "cpu" 使用CPU
 
 # Training hyperparameters
 training:
   max_epochs: 200
-  patience: 40
+  patience: 20
   batch_size: 4
   learning_rate: 0.0003
   weight_decay: 0.00001

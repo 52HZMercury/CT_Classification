@@ -40,7 +40,7 @@ def process_dataframe(df, base_data_dir, feature_cols, label_col):
 
         entry = {
             "image": os.path.join(base_data_dir, "image", f"{patient_id}.nii.gz"),
-            "CA": os.path.join(base_data_dir, "CA", f"{patient_id}.nii.gz"),
+            # "CA": os.path.join(base_data_dir, "CA", f"{patient_id}.nii.gz"),
             "CAC": os.path.join(base_data_dir, "CAC", f"{patient_id}.nii.gz"),
             "tabular_features": tabular_vector,
             "label": label_val
@@ -61,12 +61,12 @@ def generate_multimodal_json_raw(input_file, output_dir='../metadata', output_fi
 
     # 3. 定义特征列与标签列
     feature_cols = [
-        'Male', 'Age', 'BMI', 'STS_score', 'Hypertension', 'Diabetes', 'COPD', 'Coronary_artery_disease',
-        'Chronic_kidney_disease', 'Prior_atrial_fibrillation', 'Peripheral_vascular_disease', 'Prior_stroke_TIA',
+        'Male', 'Age', 'BMI', 'STS_score', 'Hypertension', 'Diabetes', 'Coronary_artery_disease',
+        'Chronic_kidney_disease', 'Prior_atrial_fibrillation', 'Prior_stroke_TIA',
         'Aortic_valve_calcification_volume', 'calcified_raphe', 'Annulus_angulation', 'Annular_perimeter',
-        'Annular_area', 'SOV_perimeter', 'STJ_diameter', 'Left_coronary_artery_ostium_height',
-        'Right_coronary_artery_ostium_height', 'Maximal_diameter_of_ascending_aorta', 'LVOT_perimeter',
-        'Aortic_regurgitation_moderate', 'Mean_aortic_valve_gradient', 'Peak_aortic_valve_velocity',
+        'Annular_area', 'STJ_diameter', 'Left_coronary_artery_ostium_height',
+        'Right_coronary_artery_ostium_height', 'LVOT_perimeter',
+         'Mean_aortic_valve_gradient', 'Peak_aortic_valve_velocity',
         'LVEF', 'LVEDD', 'IVS'
     ]
     label_col = 'Bad_valve_performance'

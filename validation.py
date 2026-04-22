@@ -18,10 +18,10 @@ def validation(Trainer):
         for batch in Trainer.val_loader:
             # 1. 同样取出三个模态
             img = batch["image"].to(Trainer.device)
-            ca = batch["CA"].to(Trainer.device)
+            # ca = batch["CA"].to(Trainer.device)
             cac = batch["CAC"].to(Trainer.device)
             # 2. 在通道维度拼接
-            val_images = torch.cat([img, ca, cac], dim=1)  # 拼接后变为 [B, 3, H, W, D]
+            val_images = torch.cat([img, cac], dim=1)  # 拼接后变为 [B, 3, H, W, D]
 
             # pred = batch["pred"].to(Trainer.device)
             # val_images = torch.cat([img, pred], dim=1)
