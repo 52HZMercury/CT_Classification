@@ -14,6 +14,7 @@ def validation(Trainer):
     all_preds = []
     all_labels = []
 
+
     with torch.no_grad():
         for batch in Trainer.val_loader:
             # 1. 同样取出三个模态

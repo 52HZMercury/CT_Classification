@@ -91,6 +91,8 @@ def generate_multimodal_json_raw(input_file, output_dir='../metadata', output_fi
     pos_samples_huaxi = [d for d in huaxi_data_list if d['label'] == 1]
     neg_samples_huaxi = [d for d in huaxi_data_list if d['label'] == 0]
 
+    neg_samples_huaxi = neg_samples_huaxi[:200]
+
     # 分别对正负样本进行 8:2 划分
     train_pos_hauxi, val_pos_huaxi = train_test_split(pos_samples_huaxi, test_size=0.2, random_state=42)
     train_neg_huaxi, val_neg_huaxi = train_test_split(neg_samples_huaxi, test_size=0.2, random_state=42)
