@@ -90,8 +90,9 @@ def generate_multimodal_json_raw(input_file, output_dir='../metadata', output_fi
     # 划分 huaxi 数据
     pos_samples_huaxi = [d for d in huaxi_data_list if d['label'] == 1]
     neg_samples_huaxi = [d for d in huaxi_data_list if d['label'] == 0]
+    print(f"📊 huaxi 验证集: (阳性: {len(pos_samples_huaxi)} | 阴性: {len(neg_samples_huaxi)})")
 
-    neg_samples_huaxi = neg_samples_huaxi[:200]
+    neg_samples_huaxi = neg_samples_huaxi[:276]
 
     # 分别对正负样本进行 8:2 划分
     train_pos_hauxi, val_pos_huaxi = train_test_split(pos_samples_huaxi, test_size=0.2, random_state=42)
@@ -110,6 +111,9 @@ def generate_multimodal_json_raw(input_file, output_dir='../metadata', output_fi
     pos_samples_other = [d for d in other_data_list if d['label'] == 1]
     neg_samples_other = [d for d in other_data_list if d['label'] == 0]
 
+    print(f"📊 Other 验证集: (阳性: {len(pos_samples_other)} | 阴性: {len(neg_samples_other)})")
+    neg_samples_other = neg_samples_other[:56]
+
     # 分别对正负样本进行 8:2 划分
     train_pos_other, val_pos_other = train_test_split(pos_samples_other, test_size=0.2, random_state=42)
     train_neg_other, val_neg_other = train_test_split(neg_samples_other, test_size=0.2, random_state=42)
@@ -117,17 +121,20 @@ def generate_multimodal_json_raw(input_file, output_dir='../metadata', output_fi
 
     # 6. 合并验证集并打乱顺序
     train_data = train_pos_hauxi + train_neg_huaxi + train_pos_other + train_neg_other
-    val_data = val_pos_huaxi + val_neg_huaxi + val_pos_other + val_neg_other
+    val_data_huaxi = val_pos_huaxi + val_neg_huaxi
+    val_data_other = val_pos_other + val_neg_other
 
     random.seed(42)
     random.shuffle(train_data)
-    random.shuffle(val_data)
+    random.shuffle(val_data_huaxi)
+    random.shuffle(val_data_other)
 
     # 7. 构建最终 JSON 结构
     final_output = {
         "features_list": final_feature_cols,
         "training": train_data,
-        "validation": val_data
+        "validation_huaxi": val_data_huaxi,
+        "validation_other": val_data_other
     }
 
     # 8. 写入并打印统计信息
@@ -139,7 +146,8 @@ def generate_multimodal_json_raw(input_file, output_dir='../metadata', output_fi
     print(f"✅ 多模态数据集已生成！保存至: {output_path}")
     print(f"📊 总样本数: {len(huaxi_data_list) + len(other_data_list)}")
     print(f"📊 训练集: {len(train_data)} (阳性: {len(train_pos_hauxi) + len(train_pos_other)} | 阴性: {len(train_neg_huaxi) + len(train_neg_other)})")
-    print(f"📊 验证集: {len(val_data)} (阳性: {len(val_pos_huaxi) + len(val_pos_other)} | 阴性: {len(val_neg_huaxi) + len(val_neg_other)})")
+    print(f"📊 Huaxi 验证集: {len(val_data_huaxi)} (阳性: {len(val_pos_huaxi)} | 阴性: {len(val_neg_huaxi)})")
+    print(f"📊 Other 验证集: {len(val_data_other)} (阳性: {len(val_pos_other)} | 阴性: {len(val_neg_other)})")
     print("-" * 30)
 
 

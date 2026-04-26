@@ -64,7 +64,8 @@ class Trainer:
         self.config = config
 
         self.device = self._init_device()
-        self.train_loader, self.val_loader = self._init_data_loaders()
+        self.train_loader, self.val_loaders = self._init_data_loaders()
+        self.val_loader = next(iter(self.val_loaders.values()))
         self.model = self._init_model().to(self.device)
 
         # 分类专用损失函数
@@ -103,9 +104,9 @@ class Trainer:
         datalist = load_decathlon_datalist(
             split_json, is_segmentation=False, data_list_key=self.config['data']['datasets_key']
         )
-        val_files = load_decathlon_datalist(
-            split_json, is_segmentation=False, data_list_key=self.config['data']['validation_key']
-        )
+        validation_keys = self.config['data'].get('validation_keys')
+        if validation_keys is None:
+            validation_keys = {'validation': self.config['data']['validation_key']}
 
         from data.Augmentation import train_transforms, val_transforms
 
@@ -115,19 +116,25 @@ class Trainer:
             cache_rate=self.config['training']['cache_rate'],
             num_workers=self.config['training']['num_workers'],
         )
-        val_ds = CacheDataset(
-            data=val_files, transform=val_transforms,
-            cache_num=self.config['validation']['cache_num'],
-            cache_rate=self.config['validation']['cache_rate'],
-            num_workers=self.config['validation']['num_workers'],
-        )
+        val_loaders = {}
+        for val_name, val_key in validation_keys.items():
+            val_files = load_decathlon_datalist(
+                split_json, is_segmentation=False, data_list_key=val_key
+            )
+            val_ds = CacheDataset(
+                data=val_files, transform=val_transforms,
+                cache_num=self.config['validation']['cache_num'],
+                cache_rate=self.config['validation']['cache_rate'],
+                num_workers=self.config['validation']['num_workers'],
+            )
+            val_loaders[val_name] = DataLoader(
+                val_ds, batch_size=self.config['validation']['batch_size'], shuffle=False,
+                num_workers=self.config['validation']['num_workers']
+            )
 
         train_loader = DataLoader(train_ds, batch_size=self.config['training']['batch_size'], shuffle=True,
                                   num_workers=self.config['training']['num_workers'])
-        val_loader = DataLoader(val_ds, batch_size=self.config['validation']['batch_size'], shuffle=False,
-                                num_workers=self.config['validation']['num_workers'])
-
-        return train_loader, val_loader
+        return train_loader, val_loaders
 
     def _init_model(self):
         from models.getmodel import create_model

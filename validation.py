@@ -1,14 +1,11 @@
-import yaml
 import torch
 from monai.networks.utils import one_hot
 
-config_path = "config/config.yaml"
-with open(config_path, 'r', encoding='utf-8') as f:
-    config = yaml.safe_load(f)
-
-def validation(Trainer):
+def validation(Trainer, val_loader=None):
     Trainer.model.eval()
     Trainer.auc_metric.reset()
+    if val_loader is None:
+        val_loader = Trainer.val_loader
 
     # 用于手动收集整个验证集的所有预测和真实标签
     all_preds = []
@@ -16,7 +13,7 @@ def validation(Trainer):
 
 
     with torch.no_grad():
-        for batch in Trainer.val_loader:
+        for batch in val_loader:
             # 1. 同样取出三个模态
             img = batch["image"].to(Trainer.device)
             # ca = batch["CA"].to(Trainer.device)
@@ -48,7 +45,7 @@ def validation(Trainer):
             all_labels.append(val_labels.cpu())
 
             # 3. AUC 指标不受影响，继续用 MONAI 的计算
-            n_classes = config['model']['num_classes']
+            n_classes = Trainer.config['model']['num_classes']
             val_labels_oh = one_hot(val_labels.unsqueeze(1), num_classes=n_classes)
             Trainer.auc_metric(y_pred=probs, y=val_labels_oh)
 

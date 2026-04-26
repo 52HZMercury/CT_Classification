@@ -57,18 +57,30 @@ def train(Trainer, current_epoch, acc_best, auc_best, ppv_best, npv_best, rec_be
         # Epoch 结束后的验证
         if step + 1 == num_steps:
             # 调用分类版的 validation (下方会定义)
-            acc_val, auc_val, ppv_val, npv_val, rec_val, spec_val = validation(Trainer)
+            val_results = {}
+            for val_name, val_loader in Trainer.val_loaders.items():
+                val_results[val_name] = validation(Trainer, val_loader)
+            Trainer.last_val_results = val_results
+
+            primary_val_name = next(iter(val_results))
+            acc_val, auc_val, ppv_val, npv_val, rec_val, spec_val = val_results[primary_val_name]
 
             epoch_loss /= num_steps
             Trainer.scheduler.step(acc_val)
 
             # 2. 写入 TensorBoard
-            Trainer.writer.add_scalar('Validation/Accuracy', acc_val, current_epoch)
-            Trainer.writer.add_scalar('Validation/AUC', auc_val, current_epoch)
-            Trainer.writer.add_scalar('Validation/PPV(Precision)', ppv_val, current_epoch)
-            Trainer.writer.add_scalar('Validation/NPV', npv_val, current_epoch)
-            Trainer.writer.add_scalar('Validation/Recall', rec_val, current_epoch)
-            Trainer.writer.add_scalar('Validation/Specificity', spec_val, current_epoch)
+            for val_name, metrics in val_results.items():
+                acc_i, auc_i, ppv_i, npv_i, rec_i, spec_i = metrics
+                tag_prefix = f'Validation/{val_name}'
+                Trainer.writer.add_scalar(f'{tag_prefix}/Accuracy', acc_i, current_epoch)
+                Trainer.writer.add_scalar(f'{tag_prefix}/AUC', auc_i, current_epoch)
+                Trainer.writer.add_scalar(f'{tag_prefix}/PPV(Precision)', ppv_i, current_epoch)
+                Trainer.writer.add_scalar(f'{tag_prefix}/NPV', npv_i, current_epoch)
+                Trainer.writer.add_scalar(f'{tag_prefix}/Recall', rec_i, current_epoch)
+                Trainer.writer.add_scalar(f'{tag_prefix}/Specificity', spec_i, current_epoch)
+                print(f'Validation[{val_name}] Acc: {acc_i:.4f}, AUC: {auc_i:.4f}, '
+                      f'PPV: {ppv_i:.4f}, NPV: {npv_i:.4f}, '
+                      f'Recall: {rec_i:.4f}, Specificity: {spec_i:.4f}')
 
             # 3. 顺便可以在控制台打印出这些指标
             # 监控auc指标
@@ -80,6 +92,7 @@ def train(Trainer, current_epoch, acc_best, auc_best, ppv_best, npv_best, rec_be
                 rec_best = rec_val
                 spec_best = spec_val
                 global_step_best = current_epoch
+                Trainer.best_val_results = val_results
                 early_stop_counter = 0
 
                 # checkpoint_dir = os.path.join(config['data']['out_dir'], f"{config['data']['exp_name']}/checkpoint")
@@ -103,12 +116,12 @@ def train(Trainer, current_epoch, acc_best, auc_best, ppv_best, npv_best, rec_be
                 torch.save(Trainer.model.state_dict(),
                            os.path.join(checkpoint_dir, f"best_metric_model_{auc_val:.4f}.pth"))
                 # 更新打印信息
-                print(f'New Best Acc: {acc_best:.4f}, AUC: {auc_val:.4f}, '
+                print(f'New Best ({primary_val_name}) Acc: {acc_best:.4f}, AUC: {auc_val:.4f}, '
                       f'PPV: {ppv_val:.4f}, NPV: {npv_val:.4f}, '
                       f'Recall: {rec_val:.4f}, Specificity: {spec_val:.4f}')
             else:
                 early_stop_counter += 1
-                print(f'Not improved. Best Acc: {acc_best:.4f}, EarlyStop: {early_stop_counter}/{patience}')
+                print(f'Not improved on {primary_val_name}. Best Acc: {acc_best:.4f}, EarlyStop: {early_stop_counter}/{patience}')
 
             if early_stop_counter >= patience:
                 stop_training = True

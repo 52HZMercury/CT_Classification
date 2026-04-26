@@ -87,12 +87,24 @@ def main():
     print("")
     print(f"======================= 训练完成 ========================")
     print(f"== 实验名称  : {config['data']['exp_name']}")
-    print(f"== ACC: {acc_val_best:.4f}")
-    print(f"== AUC: {auc_val_best:.4f}")
-    print(f"== PPV: {ppv_val_best:.4f}")
-    print(f"== NPV: {npv_val_best:.4f}")
-    print(f"== Recall: {rec_val_best:.4f}")
-    print(f"== Specificity: {spec_val_best:.4f}")
+    final_val_results = getattr(trainer, "best_val_results", getattr(trainer, "last_val_results", None))
+    if final_val_results is not None:
+        for val_name, metrics in final_val_results.items():
+            acc_val, auc_val, ppv_val, npv_val, rec_val, spec_val = metrics
+            print(f"== Validation[{val_name}]")
+            print(f"   ACC: {acc_val:.4f}")
+            print(f"   AUC: {auc_val:.4f}")
+            print(f"   PPV: {ppv_val:.4f}")
+            print(f"   NPV: {npv_val:.4f}")
+            print(f"   Recall: {rec_val:.4f}")
+            print(f"   Specificity: {spec_val:.4f}")
+    else:
+        print(f"== ACC: {acc_val_best:.4f}")
+        print(f"== AUC: {auc_val_best:.4f}")
+        print(f"== PPV: {ppv_val_best:.4f}")
+        print(f"== NPV: {npv_val_best:.4f}")
+        print(f"== Recall: {rec_val_best:.4f}")
+        print(f"== Specificity: {spec_val_best:.4f}")
     print(f"== 最佳轮次 (Epoch): {global_step_best}")
     print(f"=======================================================")
 

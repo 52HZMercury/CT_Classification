@@ -8,7 +8,10 @@ data:
 #  split_json: "metadata/huaxi_pvl_30daysSuccess.json"
 
   datasets_key: "training"
-  validation_key: "validation"
+  validation_key: "validation_huaxi"
+  validation_keys:
+    huaxi: "validation_huaxi"
+    other: "validation_other"
 
 # Model parameters
 model:
