@@ -99,9 +99,9 @@ def load_model(checkpoint_path, device):
 
 
 def main():
-    save_dir = os.path.join(project_root, "logs/exp_260410-1558/visualization")
+    save_dir = os.path.join(project_root, "logs/exp_260427-0029/visualization")
     os.makedirs(save_dir, exist_ok=True)
-    checkpoint_path = os.path.join(project_root, "logs/exp_260410-1558/checkpoint/best_metric_model_0.8554.pth")
+    checkpoint_path = os.path.join(project_root, "logs/exp_260427-0029/checkpoint/best_metric_model_0.9444.pth")
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print("Loading model...")
@@ -122,7 +122,7 @@ def main():
 
     # 加载一条测试数据
     dataset_json = config['data']['split_json']
-    val_data_list = load_decathlon_datalist(dataset_json, is_segmentation=False, data_list_key="validation")
+    val_data_list = load_decathlon_datalist(dataset_json, is_segmentation=False, data_list_key="validation_other")
     val_ds = CacheDataset(data=val_data_list, transform=val_transforms, cache_rate=1.0)
     val_loader = DataLoader(val_ds, batch_size=1, shuffle=False)
 
@@ -133,9 +133,10 @@ def main():
         batch = next(it)
 
     img = batch["image"].to(device)
-    ca = batch["CA"].to(device)
+    # ca = batch["CA"].to(device)
     cac = batch["CAC"].to(device)
-    x_image = torch.cat([img, ca, cac], dim=1)  # [B, 3, H, W, D]
+    # x_image = torch.cat([img, ca, cac], dim=1)  # [B, 3, H, W, D]
+    x_image = torch.cat([img, cac], dim=1)
 
     x_tabular = batch["tabular_features"]
     if isinstance(x_tabular, list):
@@ -155,7 +156,7 @@ def main():
     depth = original_volume.shape[2]
 
     # 创建专门存放切片的子目录
-    slices_dir = os.path.join(save_dir, "all_slices")
+    slices_dir = os.path.join(save_dir, "cam_all_slices")
     os.makedirs(slices_dir, exist_ok=True)
 
     print(f"Total slices to save: {depth}. Processing...")
@@ -173,13 +174,13 @@ def main():
         axes[0].axis('off')
 
         # 2. 纯热力图 (使用 vmin/vmax 确保所有切片的颜色量程一致)
-        axes[1].imshow(cam_slice, cmap='jet', vmin=0, vmax=1)
+        axes[1].imshow(cam_slice, cmap='jet_r', vmin=0, vmax=1)
         axes[1].set_title(f"Grad-CAM Heatmap")
         axes[1].axis('off')
 
         # 3. 叠加图 (Overlay)
         axes[2].imshow(orig_slice, cmap='gray')
-        axes[2].imshow(cam_slice, cmap='jet', alpha=0.5, vmin=0, vmax=1)
+        axes[2].imshow(cam_slice, cmap='jet_r', alpha=0.5, vmin=0, vmax=1)
         axes[2].set_title(f"Overlay (Slice {i})")
         axes[2].axis('off')
 
