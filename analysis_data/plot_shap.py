@@ -53,9 +53,10 @@ def prepare_data(dataloader, num_samples, device):
 
     for batch in dataloader:
         img = batch["image"].to(device)
-        ca = batch["CA"].to(device)
+        # ca = batch["CA"].to(device)
         cac = batch["CAC"].to(device)
-        x_image = torch.cat([img, ca, cac], dim=1)
+        # x_image = torch.cat([img, ca, cac], dim=1)
+        x_image = torch.cat([img, cac], dim=1)
 
         x_tabular = batch["tabular_features"]
         if isinstance(x_tabular, list):
@@ -76,16 +77,16 @@ def prepare_data(dataloader, num_samples, device):
 
 def main():
     # 定义保存目录
-    save_dir = "/workdir2/cn24/program/CT_Classification/logs/exp_260410-1558/visualization"
+    save_dir = "/workdir2/cn24/program/CT_Classification/logs/exp_260427-0029/visualization"
     os.makedirs(save_dir, exist_ok=True)  # 确保保存目录存在
-    checkpoint_path = "/workdir2/cn24/program/CT_Classification/logs/exp_260410-1558/checkpoint/best_metric_model_0.8554.pth"
+    checkpoint_path = "/workdir2/cn24/program/CT_Classification/logs/exp_260427-0029/checkpoint/best_metric_model_0.9444.pth"
 
     device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
     print("Loading model...")
     model = load_model(checkpoint_path, device)
 
     dataset_json = config['data']['split_json']
-    val_data_list = load_decathlon_datalist(dataset_json, is_segmentation=False, data_list_key="validation")
+    val_data_list = load_decathlon_datalist(dataset_json, is_segmentation=False, data_list_key="validation_huaxi")
 
     val_ds = CacheDataset(data=val_data_list, transform=val_transforms, cache_rate=1.0)
     val_loader = DataLoader(val_ds, batch_size=1, shuffle=False)
@@ -148,19 +149,16 @@ def main():
     tabular_features_np = test_tabular.cpu().numpy()
 
     feature_names = [
-        'Male', 'Age', 'BMI', 'STS_score', 'Hypertension', 'Diabetes', 'COPD',
-        'Coronary_artery_disease', 'Chronic_kidney_disease', 'Prior_atrial_fibrillation',
-        'Peripheral_vascular_disease', 'Prior_stroke_TIA', 'Aortic_valve_calcification_volume',
-        'calcified_raphe', 'Annulus_angulation', 'Annular_perimeter', 'Annular_area',
-        'SOV_perimeter', 'STJ_diameter', 'Left_coronary_artery_ostium_height',
-        'Right_coronary_artery_ostium_height', 'Maximal_diameter_of_ascending_aorta',
-        'LVOT_perimeter', 'Aortic_regurgitation_moderate', 'Mean_aortic_valve_gradient',
-        'Peak_aortic_valve_velocity', 'LVEF', 'LVEDD', 'IVS', 'THV_brand_1', 'THV_size',
-        'Pre_dilatation', 'Post_dilatation', 'Implantation_of_multiple_THVs',
-        'Peak_velocity_at_30_days', 'Mean_gradient_at_30_days', 'PVL_moderate_at_30_days'
+        'Male', 'Age', 'BMI', 'STS_score', 'Hypertension', 'Diabetes', 'Coronary_artery_disease',
+        'Chronic_kidney_disease', 'Prior_atrial_fibrillation', 'Prior_stroke_TIA',
+        'Aortic_valve_calcification_volume', 'calcified_raphe', 'Annulus_angulation', 'Annular_perimeter',
+        'Annular_area', 'STJ_diameter', 'Left_coronary_artery_ostium_height',
+        'Right_coronary_artery_ostium_height', 'LVOT_perimeter',
+         'Mean_aortic_valve_gradient', 'Peak_aortic_valve_velocity',
+        'LVEF', 'LVEDD', 'IVS'
     ]
 
-    shap_summary_save_path = os.path.join(save_dir, "shap_summary_clinical.png")
+    shap_summary_save_path = os.path.join(save_dir, "shap_summary_clinical_huaxi.png")
     plt.figure(figsize=(10, 8))
     shap.summary_plot(tabular_shap, tabular_features_np, feature_names=feature_names, show=False)
     plt.title("SHAP Summary Plot (Clinical Features)")
@@ -186,7 +184,7 @@ def main():
     axes[1].set_title("SHAP Value Heatmap")
     axes[1].axis('off')
 
-    shap_slice_save_path = os.path.join(save_dir, "SHAP_Slice.png")
+    shap_slice_save_path = os.path.join(save_dir, "SHAP_Slice_huaxi.png")
     plt.savefig(shap_slice_save_path, dpi=300)
     plt.close()
     print(f"Saved image SHAP plot to {shap_slice_save_path}")

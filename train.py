@@ -62,7 +62,8 @@ def train(Trainer, current_epoch, acc_best, auc_best, ppv_best, npv_best, rec_be
                 val_results[val_name] = validation(Trainer, val_loader)
             Trainer.last_val_results = val_results
 
-            primary_val_name = next(iter(val_results))
+            # 使用其他医院的作为监测
+            primary_val_name = list(val_results.keys())[1]
             acc_val, auc_val, ppv_val, npv_val, rec_val, spec_val = val_results[primary_val_name]
 
             epoch_loss /= num_steps
@@ -83,8 +84,8 @@ def train(Trainer, current_epoch, acc_best, auc_best, ppv_best, npv_best, rec_be
                       f'Recall: {rec_i:.4f}, Specificity: {spec_i:.4f}')
 
             # 3. 顺便可以在控制台打印出这些指标
-            # 监控auc指标
-            if auc_val > auc_best:
+            # 监控rec指标
+            if acc_val > acc_best:
                 acc_best = acc_val
                 auc_best = auc_val
                 ppv_best = ppv_val
